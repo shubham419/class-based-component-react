@@ -15,7 +15,11 @@ class Counter extends React.Component {
         };
       });
     } else {
-      console.log("hi");
+      this.setState((prv) => {
+        return {
+          count: prv.count - 1,
+        };
+      });
     }
   }
   render() {
